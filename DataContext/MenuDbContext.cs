@@ -76,28 +76,28 @@ namespace DataContext
                 {
                    Id = 1,
                    Name = "Cola",
-                   FoodServedId = (int)FoodServedTypeEnum.Cold,
+                   FoodServedTypeId = (int)FoodServedTypeEnum.Cold,
                    IsAFoodItem = false,
                    Price = 0.50
                 },
                 new MenuItem{
                    Id = 2,
                    Name = "Coffee",
-                   FoodServedId = (int)FoodServedTypeEnum.Hot,
+                   FoodServedTypeId = (int)FoodServedTypeEnum.Hot,
                    IsAFoodItem = false,
                    Price = 1.00
                 },
                 new MenuItem{
                    Id = 3,
                    Name = "Cheese Sandwich",
-                   FoodServedId = (int)FoodServedTypeEnum.Cold,
+                   FoodServedTypeId = (int)FoodServedTypeEnum.Cold,
                    IsAFoodItem = true,
                    Price = 2.00
                 },
                 new MenuItem{
-                   Id = 3,
+                   Id = 4,
                    Name = "Steak Sandwich",
-                   FoodServedId = (int)FoodServedTypeEnum.Hot,
+                   FoodServedTypeId = (int)FoodServedTypeEnum.Hot,
                    IsAFoodItem = true,
                    Price = 4.50
                 },
