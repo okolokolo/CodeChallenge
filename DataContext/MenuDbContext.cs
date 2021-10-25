@@ -125,7 +125,7 @@ namespace DataContext
             modelBuilder.Entity<OrderMenuItem>(x => {
                 x.ToTable("OrderMenuItems");
                 x.HasIndex(omi => new { omi.OrderId, omi.MenuItemId })
-                 .HasDatabaseName("UC_Phones_ContactId_PhoneTypeId")
+                 .HasDatabaseName("UC_OrderMenuItems_OrderId_MenuItemId")
                  .IsUnique();
             });
             
