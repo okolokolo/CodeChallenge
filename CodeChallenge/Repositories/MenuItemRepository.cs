@@ -7,16 +7,16 @@ namespace CodeChallenge.Repositories
 {
     public class MenuItemRepository : IMenuItemRepository
     {
-        readonly MenuDbContext _MenuDbContext;
+        readonly MenuDbContext _menuDbContext;
 
         public MenuItemRepository(MenuDbContext menuDbContext)
         {
-            _MenuDbContext = menuDbContext;
+            _menuDbContext = menuDbContext;
         }
 
         public IQueryable<MenuItem> Get(List<int> ids)
         {
-            return _MenuDbContext.MenuItems.Where(x => ids.Contains(x.Id));
+            return _menuDbContext.MenuItems.Where(x => ids.Contains(x.Id));
         }
 
     }
