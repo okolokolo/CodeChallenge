@@ -8,10 +8,10 @@ namespace DataContext
 {
     public class MenuDbContext : DbContext
     {
-        public DbSet<FoodServedType> FoodServedTypes;
-        public DbSet<MenuItem> MenuItems;
-        public DbSet<Order> Orders;
-        public DbSet<OrderMenuItem> OrderMenuItems;
+        public DbSet<FoodServedType> FoodServedTypes { get; set; }
+        public DbSet<MenuItem> MenuItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderMenuItem> OrderMenuItems { get; set; }
 
         public MenuDbContext() : base()
         {
@@ -29,29 +29,29 @@ namespace DataContext
         {
             Console.WriteLine("Clearing database if data exists...");
             bool dataCleared = false;
-            //if (MenuItems.Any())
-            //{
-            //    this.MenuItems.RemoveRange(this.MenuItems);
-            //    dataCleared = true;
-            //}
+            if (MenuItems.Any())
+            {
+                this.MenuItems.RemoveRange(this.MenuItems);
+                dataCleared = true;
+            }
 
-            //if (this.FoodServedTypes.Any())
-            //{
-            //    this.FoodServedTypes.RemoveRange(this.FoodServedTypes);
-            //    dataCleared = true;
-            //}
+            if (this.FoodServedTypes.Any())
+            {
+                this.FoodServedTypes.RemoveRange(this.FoodServedTypes);
+                dataCleared = true;
+            }
 
-            //if (this.OrderMenuItems.Any())
-            //{
-            //    this.OrderMenuItems.RemoveRange(this.OrderMenuItems);
-            //    dataCleared = true;
-            //}
+            if (this.OrderMenuItems.Any())
+            {
+                this.OrderMenuItems.RemoveRange(this.OrderMenuItems);
+                dataCleared = true;
+            }
 
-            //if (this.Orders.Any())
-            //{
-            //    this.Orders.RemoveRange(this.Orders);
-            //    dataCleared = true;
-            //}
+            if (this.Orders.Any())
+            {
+                this.Orders.RemoveRange(this.Orders);
+                dataCleared = true;
+            }
 
             if (dataCleared)
                 this.SaveChanges();

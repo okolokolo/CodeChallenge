@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /DataContext/Migrations
 /CodeChallenge/MenuDb.db
+/CodeChallenge/MenuDb.db-wal
+/CodeChallenge/MenuDb.db-shm
